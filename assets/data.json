@@ -1,0 +1,14 @@
+{
+  "settings": {
+    "newTextDelay": 10000
+  },
+  "texts": [
+    "I have no idea what I'm doing!",
+    "Drinking coffee!",
+    "I have too much time",
+    "What can I do for you?",
+    "Don't wait any longer...",
+    "Time's running out",
+    "Hit refresh!"
+  ]
+}

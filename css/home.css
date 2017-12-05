@@ -1,0 +1,108 @@
+* {
+  color: white;
+  text-align: center;
+  font-size: 2vmin;
+  line-height: 1;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+}
+
+#bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("https://source.unsplash.com/1920x1080?christmas");
+  background-size: cover;
+  z-index: -1;
+  opacity: .2;
+}
+
+#container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: stretch;
+  align-content: stretch;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 3fr 3fr 1fr 3fr;
+  grid-template-areas: ". . ." ". name ." ". details ." ". . .";
+}
+
+#name {
+  grid-area: name;
+}
+
+#name .name {
+  text-transform: uppercase;
+  font-size: 15vmin;
+  font-weight: 900;
+}
+
+#name .desc {
+  opacity: .5;
+  transition: opacity 2s cubic-bezier(.86, 0, .07, 1);
+}
+
+#name .desc.out {
+  opacity: 0;
+}
+
+#details {
+  grid-area: details;
+  justify-self: stretch;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+#details div {
+  height: 2vmax;
+  width: 2vmax;
+  opacity: .6;
+  cursor: pointer;
+  transition: all .1s linear;
+}
+
+#details div:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+#details div:active {
+  transform: scale(.975);
+}
+
+#details .logo {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (orientation: portrait) {
+  * {
+    font-size: 3vmin;
+  }
+  #container {
+    grid-template-columns: auto;
+    grid-template-rows: 3fr 3fr 1fr 3fr;
+    grid-template-areas: "." "name" "details" ".";
+  }
+  #name .name {
+    font-size: 25vmin;
+  }
+  #details div {
+    height: 10vmin;
+    width: 10vmin;
+  }
+}
