@@ -3,9 +3,9 @@
   left: 0;
   z-index: 50;
   position: absolute;
-  width: 100vmax;
+  width: 100vw;
   height: 3.25vmax;
-  background-color: #7289DA;
+  background-color: #0F0F0F;
   transition: transform .4s cubic-bezier(.79, .14, .15, .86);
 }
 
@@ -30,4 +30,27 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+}
+
+@media (orientation: portrait) {
+  #notification_bar {
+    height: auto;
+  }
+
+  #notification_bar .notification_container {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  #notification_bar .text {
+    font-size: 2.5vmax;
+    margin-bottom: 2vmax;
+  }
+
+  #notification_bar .close_notification {
+    margin: 2vmax 0;
+    order: -1;
+    height: 2.5vmax;
+    width: 2.5vmax;
+  }
 }
