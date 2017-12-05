@@ -20,8 +20,18 @@ let Main = (function() {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-  async function getText() {
-    return data.texts[Math.floor(Math.random() * data.texts.length)];
+  async function getText(...exclude) {
+    let texts = data.texts.slice();
+
+    for (var i = 0; i < exclude.length; i++) {
+      let index = texts.indexOf(exclude[i]);
+
+      if (index > -1) {
+        texts.splice(index, 1);
+      }
+    }
+
+    return texts[Math.floor(Math.random() * texts.length)];
   }
 
   function setupCopy() {
@@ -38,7 +48,7 @@ let Main = (function() {
     async setText() {
       references.description.addClass("out");
       await sleep(2010);
-      let text = await getText();
+      let text = await getText(references.description.text);
       references.description.text(text);
       references.description.removeClass("out");
 
