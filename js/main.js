@@ -37,7 +37,7 @@ let Main = (function() {
   function setupCopy() {
     clipboard = new Clipboard(".copiable");
 
-    clipboard.on("success", () => notificationBar.show("Copied to Clipboard!", 3000));
+    clipboard.on("success", e => notificationBar.show(e.trigger.getAttribute("data-oncopy-text") || "Copied to Clipboard!", 3000));
   }
 
   function setupReferences() {

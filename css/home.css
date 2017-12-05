@@ -18,6 +18,7 @@ body {
   left: 0;
   background-image: url("https://source.unsplash.com/1920x1080?christmas");
   background-size: cover;
+  background-position: center;
   z-index: -1;
   opacity: .2;
 }
@@ -65,20 +66,21 @@ body {
   justify-content: center;
 }
 
-#details div {
+#details>* {
   height: 2vmax;
   width: 2vmax;
+  margin: 0 .5vmax;
   opacity: .6;
   cursor: pointer;
   transition: all .1s linear;
 }
 
-#details div:hover {
+#details>*:hover {
   transform: scale(1.05);
   opacity: 1;
 }
 
-#details div:active {
+#details>*:active {
   transform: scale(.975);
 }
 
@@ -91,7 +93,7 @@ body {
 
 @media (orientation: portrait) {
   * {
-    font-size: 3vmin;
+    font-size: 4vmin;
   }
   #container {
     grid-template-columns: auto;
@@ -99,9 +101,9 @@ body {
     grid-template-areas: "." "name" "details" ".";
   }
   #name .name {
-    font-size: 25vmin;
+    font-size: 22.5vmin;
   }
-  #details div {
+  #details>* {
     height: 10vmin;
     width: 10vmin;
   }
