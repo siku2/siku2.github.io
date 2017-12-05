@@ -55,7 +55,7 @@ let Main = (function() {
       console.log("[main] set text to", text);
     },
 
-    intervalText() {
+    async intervalText() {
       let text = await getText();
       references.description.text(text);
       setInterval(this.setText, data.settings.newTextDelay);
