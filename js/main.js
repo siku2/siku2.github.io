@@ -56,7 +56,7 @@ let Main = (function() {
     },
 
     intervalText() {
-      let text = await getText(references.description.text);
+      let text = await getText();
       references.description.text(text);
       setInterval(this.setText, data.settings.newTextDelay);
     },
