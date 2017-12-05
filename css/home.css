@@ -58,7 +58,23 @@ body {
   opacity: 0;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(250%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateY(250%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 #details {
+  animation: 2s ease 0s 1 fadeIn;
   grid-area: details;
   justify-self: stretch;
   align-self: center;
@@ -69,7 +85,7 @@ body {
 #details>* {
   height: 2vmax;
   width: 2vmax;
-  margin: 0 .5vmax;
+  margin: 0 .75vmax;
   opacity: .6;
   cursor: pointer;
   transition: all .1s linear;
