@@ -51,8 +51,6 @@ let Main = (function() {
       let text = await getText(references.description.text);
       references.description.text(text);
       references.description.removeClass("out");
-
-      console.log("[main] set text to", text);
     },
 
     async intervalText() {

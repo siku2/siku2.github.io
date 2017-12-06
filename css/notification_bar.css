@@ -43,14 +43,13 @@
   }
 
   #notification_bar .text {
-    font-size: 2.5vmax;
-    margin-bottom: 2vmax;
+    font-size: 3vmax;
+    margin: 3.5vmax 0 2vmax;
   }
 
   #notification_bar .close_notification {
     margin: 2vmax 0;
-    order: -1;
-    height: 2.5vmax;
-    width: 2.5vmax;
+    height: 7.5vmin;
+    width: 7.5vmin;
   }
 }
