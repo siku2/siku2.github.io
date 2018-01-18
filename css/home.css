@@ -18,7 +18,7 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  background-image: url("https://source.unsplash.com/1920x1080?christmas");
+  background-image: url("https://source.unsplash.com/1920x1080/?snow");
   background-size: cover;
   background-position: center;
   z-index: -1;
